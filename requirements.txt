@@ -4,3 +4,4 @@ numpy
 joblib
 catboost
 pillow
+scikit-learn
