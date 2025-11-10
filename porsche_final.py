@@ -8,6 +8,23 @@ import pandas as pd
 import numpy as np
 import base64
 
+# =========================================================
+# FORCE LIGHT THEME (white background)
+# =========================================================
+st.markdown(
+    """
+    <style>
+        html, body, [class*="stAppViewContainer"], [class*="stApp"], [class*="block-container"],
+        [data-testid="stAppViewContainer"], [data-testid="stHeader"], [data-testid="stToolbar"],
+        [data-testid="stSidebar"], [data-testid="stDecoration"], [data-testid="stMainBlockContainer"] {
+            background-color: white !important;
+            color: black !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # ---------------------------------------------------------
 # PAGE CONFIG
 # ---------------------------------------------------------
