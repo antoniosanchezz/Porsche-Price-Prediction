@@ -217,7 +217,7 @@ if st.button("Predict Price"):
 st.markdown("<div class='footer'>Developed by <b>Antonio Sánchez Salamanca</b> · CatBoost ML · Streamlit 2025 · Data from Elferspot.com </div>", unsafe_allow_html=True)
 st.markdown("<div class='footer'>For any questions about the procedure or code, you can contact me at antonio.sanchez.sal@outlook.es</div>", unsafe_allow_html=True)
 st.markdown("<div class='footer'>You can view my full CV at the link below:</div>", unsafe_allow_html=True)
-'''
+
 with open("cv_antonio_sanchez.pdf", "rb") as pdf_file:
     pdf_bytes = pdf_file.read()
 
@@ -228,4 +228,3 @@ st.download_button(
     file_name="Antonio_Sanchez_CV.pdf",
     mime="application/pdf"
 )
-'''
