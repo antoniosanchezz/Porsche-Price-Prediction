@@ -228,3 +228,26 @@ st.download_button(
     file_name="Antonio_Sanchez_CV.pdf",
     mime="application/pdf"
 )
+import os, sys
+import streamlit as st
+import sklearn, catboost
+from sklearn.utils.validation import check_is_fitted
+import joblib
+
+st.write("Python:", sys.version)
+st.write("sklearn:", sklearn.__version__)
+st.write("catboost:", catboost.__version__)
+
+MODEL_PATH = "pipeline_catboost.pkl"
+st.write("Model exists:", os.path.exists(MODEL_PATH))
+if os.path.exists(MODEL_PATH):
+    st.write("Model size (bytes):", os.path.getsize(MODEL_PATH))
+
+model = joblib.load(MODEL_PATH)
+
+try:
+    check_is_fitted(model)
+    st.success("Model loaded + fitted ✅")
+except Exception as e:
+    st.error(f"Model NOT fitted / incompatible ❌: {e}")
+    st.stop()
